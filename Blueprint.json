@@ -1,0 +1,32 @@
+{
+  "landingPage": "/wp-admin/",
+  "steps": [
+    {
+      "step": "installTheme",
+      "themeSlug": "hello-elementor"
+    },
+    {
+      "step": "activateTheme",
+      "themeSlug": "hello-elementor"
+    },
+    {
+      "step": "installPlugin",
+      "pluginSlug": "elementor"
+    },
+    {
+      "step": "activatePlugin",
+      "pluginSlug": "elementor"
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/cmoizer1995/Plugins/eb3ca92bbd2b9fe339d0cd19510c52a580b9470e/sidebar-menu-multisite-v1.8.2.zip"
+      }
+    },
+    {
+      "step": "activatePlugin",
+      "pluginFolderName": "sidebar-menu-multisite"
+    }
+  ]
+}
