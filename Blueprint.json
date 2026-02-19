@@ -21,7 +21,7 @@
       "step": "installPlugin",
       "pluginZipFile": {
         "resource": "url",
-        "url": "https://raw.githubusercontent.com/cmoizer1995/Plugins/eb3ca92bbd2b9fe339d0cd19510c52a580b9470e/sidebar-menu-multisite-v1.8.2.zip"
+        "url": "https://raw.githubusercontent.com/cmoizer1995/Plugins/2958d10c7a8013e51d53101d09dccaa3a74ca816/sidebar-menu-multisite-v1.8.2.zip"
       }
     },
     {
