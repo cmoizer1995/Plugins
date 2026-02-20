@@ -35,9 +35,9 @@
       "pluginPath": "sidebar-menu-multisite/sidebar-menu-multisite.php"
     },
     {
+      "step": "runPHP",
+      "code": "<?php if (!file_exists('wp-content/mu-plugins')) { mkdir('wp-content/mu-plugins', 0755, true); } ?>"
+    },
+    {
       "step": "writeFile",
-      "path": "wp-content/mu-plugins/demo-clean-mode.php",
-      "data": "<?php\n\n// Remove Elementor from admin menu\nadd_action('admin_menu', function() {\n    remove_menu_page('elementor');\n}, 999);\n\n// Block Elementor onboarding + app pages\nadd_action('admin_init', function() {\n    if (isset($_GET['page']) && strpos($_GET['page'], 'elementor') !== false) {\n        wp_safe_redirect(admin_url());\n        exit;\n    }\n});\n\n// Hide Elementor notices\nadd_action('admin_head', function() {\n    echo '<style>.notice.elementor-message{display:none!important;}</style>';\n});\n"
-    }
-  ]
-}
+      "path": "wp-content/mu-plugins
