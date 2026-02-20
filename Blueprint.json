@@ -12,16 +12,17 @@
       "step": "activateTheme",
       "themeFolderName": "hello-elementor"
     },
-    {Value: {
-  "step": "activatePlugin",
-  "pluginFolderName": "elementor"
-}
-
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "elementor"
+      }
     },
     {
-  "step": "activatePlugin",
-  "pluginPath": "wordpress.org/elementor.php"
-}
+      "step": "activatePlugin",
+      "pluginPath": "elementor/elementor.php"
+    },
     {
       "step": "installPlugin",
       "pluginData": {
