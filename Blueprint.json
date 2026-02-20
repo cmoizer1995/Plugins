@@ -23,13 +23,6 @@
       "step": "activatePlugin",
       "pluginPath": "elementor/elementor.php"
     },
-
-    {
-      "step": "setSiteOption",
-      "optionName": "elementor_onboarded",
-      "optionValue": "yes"
-    },
-
     {
       "step": "installPlugin",
       "pluginData": {
