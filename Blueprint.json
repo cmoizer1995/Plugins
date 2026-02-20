@@ -21,18 +21,18 @@
     },
     {
       "step": "activatePlugin",
-      "pluginFolderName": "elementor"
+      "pluginPath": "elementor/elementor.php"
     },
     {
       "step": "installPlugin",
       "pluginData": {
         "resource": "url",
-        "url": "https://raw.githubusercontent.com/cmoizer1995/Plugins/2958d10c7a8013e51d53101d09dccaa3a74ca816/sidebar-menu-multisite-v1.8.2.zip"
+        "url": "https://raw.githubusercontent.com/cmoizer1995/Plugins/e8869670de5aeb7c4187437a9b65a2a41a939cc5/sidebar-menu-multisite-v1.8.2.zip"
       }
     },
     {
       "step": "activatePlugin",
-      "pluginFolderName": "sidebar-menu-multisite"
+      "pluginPath": "sidebar-menu-multisite/sidebar-menu-multisite.php"
     }
   ]
 }
