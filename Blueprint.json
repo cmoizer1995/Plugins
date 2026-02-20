@@ -20,9 +20,9 @@
       }
     },
     {
-      "step": "activatePlugin",
-      "pluginPath": "elementor/elementor.php"
-    },
+  "step": "activatePlugin",
+  "pluginPath": "elementor/elementor.php"
+}
     {
       "step": "installPlugin",
       "pluginData": {
