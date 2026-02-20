@@ -36,54 +36,7 @@
     },
     {
       "step": "runPHP",
-      "code": "<?php
-
-// Create Pages
-$pages = ['Home', 'About', 'Work', 'Blog', 'Contact'];
-$page_ids = [];
-
-foreach ($pages as $page) {
-    $existing = get_page_by_title($page);
-    if (!$existing) {
-        $page_ids[$page] = wp_insert_post([
-            'post_title'  => $page,
-            'post_status' => 'publish',
-            'post_type'   => 'page'
-        ]);
-    } else {
-        $page_ids[$page] = $existing->ID;
-    }
-}
-
-// Set homepage and posts page
-update_option('show_on_front', 'page');
-update_option('page_on_front', $page_ids['Home']);
-update_option('page_for_posts', $page_ids['Blog']);
-
-// Create Menu
-$menu_name = 'Main Menu';
-$menu = wp_get_nav_menu_object($menu_name);
-
-if (!$menu) {
-    $menu_id = wp_create_nav_menu($menu_name);
-
-    foreach ($pages as $page) {
-        wp_update_nav_menu_item($menu_id, 0, [
-            'menu-item-title'     => $page,
-            'menu-item-object'    => 'page',
-            'menu-item-object-id' => $page_ids[$page],
-            'menu-item-type'      => 'post_type',
-            'menu-item-status'    => 'publish'
-        ]);
-    }
-
-    // Assign to primary location (Hello Elementor)
-    $locations = get_theme_mod('nav_menu_locations');
-    $locations['primary'] = $menu_id;
-    set_theme_mod('nav_menu_locations', $locations);
-}
-
-?>"
+      "code": "<?php $pages=['Home','About','Work','Blog','Contact'];$page_ids=[];foreach($pages as $page){$existing=get_page_by_title($page);if(!$existing){$page_ids[$page]=wp_insert_post(['post_title'=>$page,'post_status'=>'publish','post_type'=>'page']);}else{$page_ids[$page]=$existing->ID;}}update_option('show_on_front','page');update_option('page_on_front',$page_ids['Home']);update_option('page_for_posts',$page_ids['Blog']);$menu_name='Main Menu';$menu=wp_get_nav_menu_object($menu_name);if(!$menu){$menu_id=wp_create_nav_menu($menu_name);foreach($pages as $page){wp_update_nav_menu_item($menu_id,0,['menu-item-title'=>$page,'menu-item-object'=>'page','menu-item-object-id'=>$page_ids[$page],'menu-item-type'=>'post_type','menu-item-status'=>'publish']);}$locations=get_theme_mod('nav_menu_locations');$locations['primary']=$menu_id;set_theme_mod('nav_menu_locations',$locations);} ?>"
     }
   ]
 }
