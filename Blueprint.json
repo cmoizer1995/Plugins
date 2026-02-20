@@ -33,15 +33,6 @@
     {
       "step": "activatePlugin",
       "pluginPath": "sidebar-menu-multisite/sidebar-menu-multisite.php"
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php if (!file_exists('/wordpress/wp-content/mu-plugins')) { mkdir('/wordpress/wp-content/mu-plugins', 0755, true); } ?>"
-    },
-    {
-      "step": "writeFile",
-      "path": "/wordpress/wp-content/mu-plugins/demo-clean-mode.php",
-      "data": "<?php\n\nadd_action('admin_menu', function() {\n    remove_menu_page('elementor');\n}, 999);\n\nadd_action('admin_init', function() {\n    if (isset($_GET['page']) && strpos($_GET['page'], 'elementor') !== false) {\n        wp_safe_redirect(admin_url());\n        exit;\n    }\n});\n\nadd_action('admin_head', function() {\n    echo '<style>.notice.elementor-message{display:none!important;}</style>';\n});\n"
     }
   ]
 }
