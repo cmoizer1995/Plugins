@@ -3,23 +3,29 @@
   "steps": [
     {
       "step": "installTheme",
-      "themeSlug": "hello-elementor"
+      "themeData": {
+        "resource": "wordpress.org/themes",
+        "slug": "hello-elementor"
+      }
     },
     {
       "step": "activateTheme",
-      "themeSlug": "hello-elementor"
+      "themeFolderName": "hello-elementor"
     },
     {
       "step": "installPlugin",
-      "pluginSlug": "elementor"
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "elementor"
+      }
     },
     {
       "step": "activatePlugin",
-      "pluginSlug": "elementor"
+      "pluginFolderName": "elementor"
     },
     {
       "step": "installPlugin",
-      "pluginZipFile": {
+      "pluginData": {
         "resource": "url",
         "url": "https://raw.githubusercontent.com/cmoizer1995/Plugins/2958d10c7a8013e51d53101d09dccaa3a74ca816/sidebar-menu-multisite-v1.8.2.zip"
       }
