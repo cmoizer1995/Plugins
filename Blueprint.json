@@ -21,7 +21,7 @@
     },
     {
   "step": "activatePlugin",
-  "pluginPath": "elementor/elementor.php"
+  "pluginPath": "wordpress.org/elementor.php"
 }
     {
       "step": "installPlugin",
