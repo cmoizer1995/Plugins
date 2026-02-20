@@ -1,5 +1,5 @@
 {
-  "landingPage": "/",
+  "landingPage": "/wp-admin/",
   "steps": [
     {
       "step": "installTheme",
